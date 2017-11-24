@@ -3,11 +3,14 @@
 Build scripts for Docker image.
 
 To obtain an image, either pull from DockerHub:
+
 ~docker pull vdikan/siesta-mpi:latest~
+
 or edit and run =build_siesta_mpi.sh=.
 
 ** Usage:
    Within a folder with inputs for SIESTA invoke:
+
    ~docker run -v $(pwd):/home/siesta -it siesta-mpi:latest~
 
    This will mount your current directory as volume for Docker container.
@@ -16,9 +19,8 @@ or edit and run =build_siesta_mpi.sh=.
 
 ** Todos:
    
-*** TODO Non-root default user
-    Add non-root default user that can run siesta inside the container.
-
-*** TODO Flexible build script
-    Understand Launchpad versioning and links to be able to build various
-    versions of siesta with =build_siesta_mpi=.
+   + *Non-root default user.*
+     Add non-root default user that can run siesta inside the container.
+   + *Flexible build script.*
+     Understand Launchpad versioning and links to be able to build various
+     versions of siesta with =build_siesta_mpi=.
